@@ -18,4 +18,5 @@ use App\Http\Controllers\PostController;
 Route::get('/', [PostController::class, 'index']);
 
 Route::get('/posts/criar', [PostController::class, 'create']);
+Route::get('/posts/{id}', [PostController::class, 'show']);
 Route::post('/posts', [PostController::class, 'store']);

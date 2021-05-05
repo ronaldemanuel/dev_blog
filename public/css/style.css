@@ -81,6 +81,7 @@ body {
 
 .btn-primary {
     background-color: #0A5DA4;
+    border: .5px solid #0A5DA4;
 }
 
 .btn-primary:hover {

@@ -3,7 +3,7 @@
 @section('title', 'Dev Blog')
 
 @section('content')
-    <div class="col-md-6 posts-container">
+    <div class="col-md-8 offset-md-1 posts-container">
         @foreach($posts as $post)
             <div class="card card-posts">
                 <div class="card-body">
@@ -17,7 +17,9 @@
                     </div>
                     <p class="card-text">{{ $post->content_preview }}...</p>
                     <div class="d-flex flex-row-reverse">
-                        <button class="btn btn-primary">Ver mais</button>
+                        <a href="/posts/{{ $post->id }}" class="btn btn-primary">
+                            Ver mais
+                        </a>
                     </div>
                 </div>
             </div>
