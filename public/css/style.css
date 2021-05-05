@@ -60,22 +60,22 @@ body {
     margin-bottom: 20px;
 }
 
-/* CREATE POSTS STYLES */
-.create-posts {
+/* FORMS STYLE */
+.create-container {
     background-color: #dbdbdb;
     border-radius: 15px;
     color: #000;
     font-size: 17pt;
     padding: 30px;
-    margin: 30px auto;
+    margin: 150px auto;
 }
 
-.create-posts h1 {
+.create-container h1 {
     margin-bottom: 50px;
     text-align: center;
 }
 
-.create-posts input form:focus {
+.create-container input form:focus {
     border: 1.5px solid #062958;
 }
 

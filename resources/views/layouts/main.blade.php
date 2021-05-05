@@ -29,7 +29,6 @@
                         <a href="/" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item dropdown">
-
                         <a href="/" class="nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Categorias
                         </a>
@@ -40,11 +39,11 @@
                             <li><a href="#" class="dropdown-item">Design</a></li>
                             <li><a href="#" class="dropdown-item">Linux</a></li>
                             <div class="dropdown-divider"></div>
-                            <li><a href="#" class="dropdown-item">Nova categoria</a></li>
+                            <li><a href="/categorias/criar" class="dropdown-item">Nova categoria</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="/posts/criar" class="nav-link">Criar</a>
+                        <a href="/posts/criar" class="nav-link">Criar post</a>
                     </li>
                     <li class="nav-item">
                         <a href="/" class="nav-link">Sobre</a>

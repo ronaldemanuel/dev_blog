@@ -14,9 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\CategoryController;
 
 Route::get('/', [PostController::class, 'index']);
 
+// Posts
 Route::get('/posts/criar', [PostController::class, 'create']);
 Route::get('/posts/{id}', [PostController::class, 'show']);
 Route::post('/posts', [PostController::class, 'store']);
+
+// Categories
+Route::get('/categorias/criar', [CategoryController::class, 'create']);
+Route::post('/categorias', [CategoryController::class, 'store']);
+Route::get('categorias/exibir', function () {
+    return view('categories.categories');
+});

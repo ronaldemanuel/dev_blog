@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <div class="col-md-6 create-posts">
+    <div class="col-md-6 create-container">
         <h1>Crie seu Post</h1>
         <form action="/posts" method="POST" enctype="multipart/form-data">
             @csrf
