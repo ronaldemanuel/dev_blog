@@ -8,6 +8,13 @@ use App\Models\Category;
 
 class CategoryController extends Controller
 {
+    public function index()
+    {
+        $categories = Category::all();
+
+        return view('categories.index', ['categories' => $categories]);
+    }
+
     public function create()
     {
         return view('categories.create');

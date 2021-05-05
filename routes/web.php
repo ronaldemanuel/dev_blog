@@ -24,8 +24,6 @@ Route::get('/posts/{id}', [PostController::class, 'show']);
 Route::post('/posts', [PostController::class, 'store']);
 
 // Categories
+Route::get('categorias/exibir', [CategoryController::class, 'index']);
 Route::get('/categorias/criar', [CategoryController::class, 'create']);
 Route::post('/categorias', [CategoryController::class, 'store']);
-Route::get('categorias/exibir', function () {
-    return view('categories.categories');
-});

@@ -16,11 +16,9 @@
                 <div class="col form-group">
                     <label for="category">Categoria:</label>
                     <select name="category" id="category" class="form-control">
-                        <option value="Programação">Programação</option>
-                        <option value="Ciência de Dados">Ciência de Dados</option>
-                        <option value="DevOps">DevOps</option>
-                        <option value="Design">Design</option>
-                        <option value="Linux">Linux</option>
+                        @foreach($categories as $category)
+                            <option value="{{ $category->name }}">{{ $category->name }}</option>
+                        @endforeach
                     </select>
                 </div>
                 <div class="col form-group">
