@@ -28,3 +28,7 @@ Route::get('categorias/exibir', [CategoryController::class, 'index']);
 Route::get('/categorias/criar', [CategoryController::class, 'create']);
 Route::post('/categorias', [CategoryController::class, 'store']);
 Route::get('/categorias/{id}', [CategoryController::class, 'show']);
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');

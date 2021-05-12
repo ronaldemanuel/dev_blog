@@ -28,15 +28,38 @@
                     <li class="nav-item">
                         <a href="/" class="nav-link">Home</a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item">
                         <a href="/categorias/exibir" class="nav-link">Categorias</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="/posts/criar" class="nav-link">Criar post</a>
-                    </li>
+                    @auth
+                        <li class="nav-item">
+                            <a href="/posts/criar" class="nav-link">Criar post</a>
+                        </li>
+                    @endauth
                     <li class="nav-item">
                         <a href="/" class="nav-link">Sobre</a>
                     </li>
+                    @guest
+                        <li class="nav-item">
+                            <a href="/login" class="nav-link">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/register" class="nav-link">Cadastre-se</a>
+                        </li>
+                    @endguest
+                    @auth
+                        <li class="nav-item">
+                            <form action="/logout" method="POST">
+                                @csrf
+                                <a href="/login" 
+                                class="nav-link"
+                                onclick="event.preventDefault();
+                                this.closest('form').submit();">
+                                    Sair
+                                </a>
+                            </form>
+                        </li>
+                    @endauth
                 </ul>
             </div>
         </nav>
