@@ -39,6 +39,15 @@ body {
     margin-top: 175px;
 }
 
+.posts-container .page-title {
+    color: white;
+    text-align: center;
+}
+
+.posts-container .category-link:hover {
+    text-decoration: none;
+}
+
 .card-posts {
     background-color: #dbdbdb;
     color: black;
@@ -61,7 +70,10 @@ body {
 }
 
 /* CATEGORY PAGE STYLES */
-
+.category-cards:hover{
+    background-color: #fff;
+    box-shadow: 7px 7px 4px #333333;
+}
 
 /* FORMS STYLE */
 .create-container {

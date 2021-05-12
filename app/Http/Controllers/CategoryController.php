@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Category;
+use App\Models\Post;
 
 class CategoryController extends Controller
 {
@@ -32,6 +33,14 @@ class CategoryController extends Controller
         $category->save();
 
         return redirect('/categorias/exibir');
+    }
+
+    public function show($id) 
+    {
+        $category = Category::findOrFail($id);
+        $posts = Post::all();
+
+        return view('categories.show', ['posts' => $posts], ['category' => $category]);
     }
 
 }
