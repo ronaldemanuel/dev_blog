@@ -15,6 +15,13 @@
                     <p class="card-date">Postado em: {{ $post->created_at }}</p>              
                 </div>
                 <p class="card-text">{{ $post->content}}</p>
+                <div class="d-flex flex-row-reverse">
+                    <form action="/posts/{{ $post->id }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger">Excluir</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

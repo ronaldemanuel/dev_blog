@@ -22,6 +22,7 @@ Route::get('/', [PostController::class, 'index']);
 Route::get('/posts/criar', [PostController::class, 'create']);
 Route::get('/posts/{id}', [PostController::class, 'show']);
 Route::post('/posts', [PostController::class, 'store']);
+Route::delete('/posts/{id}', [PostController::class, 'destroy']);
 
 // Categories
 Route::get('categorias/exibir', [CategoryController::class, 'index']);
